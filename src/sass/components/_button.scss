@@ -1,0 +1,214 @@
+// общие стили кнопок
+.button {
+  display: inline-block;
+  padding: 0;
+
+  font-family: inherit;
+  font-weight: 700;
+  @include font(16px, 21px);
+  border: 0;
+  border-radius: 22px;
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+  }
+}
+
+// белая модальная кнопка
+.modal-btn {
+  min-height: 44px;
+
+  color: var(--accent-color);
+  background-color: var(--bgc-contacts-btn-white);
+
+  @include transition-1-selector(background-color);
+
+  & .icon-arrow {
+    margin-left: 13px;
+    margin-bottom: -1px;
+    fill: currentColor;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: var(--accent-contacts-btn-white);
+  }
+
+  .header & {
+    display: none;
+
+    @include screen('tablet') {
+      display: inline-block;
+      min-width: 160px;
+    }
+
+    @include screen('desktop') {
+      min-width: 159px;
+      margin-right: 115px;
+    }
+  }
+
+  .about & {
+    @media screen and (max-width: 767px) {
+      margin-right: auto;
+      margin-left: auto;
+      display: block;
+    }
+    min-width: 176px;
+    @include font(14px, 18px);
+
+    @include screen('tablet') {
+      @include font(16px, 21px);
+    }
+  }
+
+  .contacts & {
+    min-width: 161px;
+
+    @include screen('tablet') {
+      min-width: 174px;
+    }
+
+    @include screen('desktop') {
+      min-width: 180px;
+    }
+  }
+
+  // модальная кнопка мобильного меню
+  .mobile-menu & {
+    display: block;
+    min-width: 209px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include screen('tablet') {
+      min-width: 186px;
+    }
+
+    & .icon-arrow {
+      margin-left: 28px;
+
+      @include screen('tablet') {
+        margin-left: 21px;
+      }
+    }
+  }
+
+  .modal & {
+    min-width: 200px;
+
+  }
+}
+
+// красная модальная кнопка
+.modal-btn.second {
+  color: var(--section-alt-background);
+  background-color: var(--bgc-contacts-btn);
+
+  &:hover,
+  &:focus {
+    background-color: var(--accent-contacts-btn-red);
+  }
+
+  .contacts & {
+    @include screen('tablet') {
+      min-width: 191px;
+    }
+
+    @include screen('desktop') {
+      min-width: 198px;
+    }
+  }
+}
+
+// белая якорная кнопка
+.anchor-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    width: 62.4px;
+    height: 24px;
+
+  color: var(--accent-color);
+  background-color: var(--bgc-contacts-btn-white);
+
+  min-height: 24px;
+  min-width: 83px;
+
+  border-radius: 20px;
+
+  font-weight: 400;
+  @include font(8px, 10px);
+
+  @include transition-1-selector(background-color);
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    background-color: var(--accent-contacts-btn-white);
+  }
+
+  @include screen('desktop') {
+    min-width: 138px;
+    min-height: 40px;
+    @include font(14px, 18px);
+  }
+}
+
+// красная якорная кнопка
+.anchor-btn.second {
+  color: var(--section-alt-background);
+  background-color: var(--bgc-contacts-btn);
+  min-width: 62.4px;
+    
+  &:hover,
+  &:focus {
+    background-color: var(--accent-contacts-btn-red);
+  }
+
+  @include screen('desktop') {
+    min-width: 104px;
+  }
+}
+
+// круглая кнопка со стрелкой
+.arrow-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+
+  background-color: var(--bgc-contacts-btn-white);
+
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+
+  @include transition-1-selector(background-color);
+
+  &:hover,
+  &:focus {
+    background-color: var(--accent-contacts-btn-white);
+  }
+
+  &__icon {
+    fill: var(--accent-contacts-btn-red);
+  }
+
+  .hero & {
+    display: none;
+
+    @include screen('tablet') {
+      position: absolute;
+      left: 154px;
+      bottom: 34px;
+
+      display: flex;
+      width: 18px;
+      height: 18px;
+    }
+  }
+}

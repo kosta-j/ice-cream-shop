@@ -1,0 +1,324 @@
+.contacts {
+  width: 100%;
+  background-color: var(--section-background);
+  margin: 0 auto;
+
+  &-link-map {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &-padding {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  &-translate {
+    transform: translateY(-84px);
+  }
+
+  &-list {
+    margin-bottom: 54px;
+  }
+
+  &-items {
+    width: 100%;
+    padding: 43px 20px;
+
+    background-color: var(--section-alt-background);
+    box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+    border-radius: 24px;
+  }
+  &-cafe {
+    // 80px
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 16px;
+
+    background: var(--bgc-contacts-cafe);
+    border-radius: 4px;
+
+    font-family: var(--main-font);
+    font-weight: 500;
+    // 12px
+    font-size: calc(12px + 4 * ((100vw - 320px) / (1280 - 320)));
+
+    line-height: 1.86;
+    letter-spacing: 0.04em;
+    color: var(--text-contacts-btn-red);
+    margin-bottom: 25px;
+  }
+  &-foodtrack {
+    // 80px
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 130px;
+    height: 16px;
+
+    background: var(--milkshakes-color);
+    border-radius: 4px;
+
+    font-family: var(--main-font);
+    font-weight: 500;
+    // 12px
+    font-size: calc(12px + 4 * ((100vw - 320px) / (1280 - 320)));
+
+    line-height: 1.86;
+    letter-spacing: 0.04em;
+    color: var(--text-contacts-btn-red);
+    margin-bottom: 25px;
+  }
+  &-town {
+    font-style: normal;
+    font-weight: 500;
+    // font-size: 0.857em;
+    font-size: calc(12px + 4 * ((100vw - 320px) / (1280 - 320)));
+    line-height: 1.86;
+    letter-spacing: 0.04em;
+    margin-bottom: 10px;
+  }
+  &-text {
+    display: flex;
+    flex-direction: column;
+    font-style: normal;
+    font-weight: 500;
+    font-size: calc(12px + 4 * ((100vw - 320px) / (1280 - 320)));
+
+    line-height: 1.5;
+    color: var(--contacts-text);
+
+    &::after {
+      width: 100%;
+      content: '';
+      border: 1px solid var(--review-decoration);
+      margin-top: 25px;
+      margin-bottom: 25px;
+    }
+  }
+  &-workdays {
+    font-weight: 500;
+    // font-size: 0.857em;
+    font-size: calc(12px + 4 * ((100vw - 320px) / (1280 - 320)));
+
+    line-height: 1.86;
+  }
+  &-worktime {
+    font-style: normal;
+    font-weight: 500;
+    // font-size: 0.857em;
+    font-size: calc(12px + 4 * ((100vw - 320px) / (1280 - 320)));
+
+    line-height: 1.86;
+    color: var(--label-title-color);
+  }
+  &-link-line {
+    display: flex;
+    flex-direction: column;
+    font-style: normal;
+    font-weight: 500;
+    // font-size: 0.857em;
+    font-size: calc(12px + 4 * ((100vw - 320px) / (1280 - 320)));
+
+    line-height: 1.5;
+    /* or 150% */
+    color: var(--contacts-text);
+    &::before {
+      width: 100%;
+      content: '';
+      border: 1px solid var(--review-decoration);
+      margin-top: 5.85vh;
+      margin-bottom: 5.85vh;
+    }
+  }
+  &-link {
+    font-style: normal;
+    font-weight: 500;
+    // font-size: 0.857em;
+    font-size: calc(12px + 4 * ((100vw - 320px) / (1280 - 320)));
+
+    line-height: 1.5;
+    /* or 150% */
+    color: var(--contacts-text);
+    cursor: pointer;
+  }
+
+  &-btn-items {
+    @media screen and (max-width: 767px) {
+      text-align: center;
+    }
+  }
+
+  &-btn-items:not(:last-child) {
+    @media screen {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .contacts {
+    &-items {
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .contacts {
+    &-items {
+      width: 350px;
+      margin: 0 auto;
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+@include screen('tablet') {
+  .contacts {
+    &-padding {
+      padding-left: 36px;
+      padding-right: 36px;
+    }
+    &-translate {
+      transform: translateY(-78px);
+    }
+    &-list {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 81px;
+    }
+    &-items {
+      padding: 50px 31px;
+
+      box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+      border-radius: 24px;
+      &:not(:last-child) {
+        margin-right: 20px;
+      }
+    }
+    &-cafe {
+      width: 73px;
+      height: 28px;
+      font-size: 16px;
+      border-radius: 6px;
+    }
+    &-foodtrack {
+      width: 138px;
+      height: 28px;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+    &-town {
+      font-size: 14px;
+      margin-bottom: 14px;
+    }
+    &-text {
+      font-size: 14px;
+
+      line-height: 1.66;
+
+      &::after {
+        margin-top: 30px;
+        margin-bottom: 30px;
+      }
+    }
+    &-workdays {
+      font-size: 14px;
+    }
+    &-worktime {
+      font-size: 14px;
+    }
+    &-link {
+      font-size: 14px;
+      line-height: 1.83;
+    }
+    &-link-line {
+      font-size: 14px;
+      line-height: 1.83;
+      &::before {
+        margin-top: 30px;
+        margin-bottom: 30px;
+      }
+    }
+    &-btn-list {
+      display: flex;
+      justify-content: space-between;
+      width: 380px;
+      margin: 0 auto;
+    }
+  }
+}
+@include screen('desktop') {
+  .contacts {
+    &-padding {
+      padding-left: 114px;
+      padding-right: 114px;
+    }
+    &-translate {
+      transform: translateY(-102px);
+    }
+    &-bg-img {
+      background-image: url('../images/desktop/contacts-bg@1x.png');
+      background-repeat: no-repeat;
+      // background-size: 100vw 382px;
+      background-position: top -10px left;
+      background-size: contain;
+      @media screen and (min-device-pixel-ratio: 2),
+        screen and (min-resolution: 192dpi),
+        screen and (min-resolution: 2dppx) {
+        &__bg-img {
+          background-image: url('../images/desktop/contacts-bg@2x.png');
+        }
+      }
+    }
+    &-list {
+      margin-bottom: 86px;
+    }
+    &-items {
+      padding: 51px 43px;
+      &:not(:last-child) {
+        margin-right: 29px;
+      }
+    }
+    &-town {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+    &-text {
+      font-size: 16px;
+      line-height: 1.83;
+
+      &::after {
+        margin-top: 32px;
+        margin-bottom: 32px;
+      }
+    }
+    &-workdays {
+      font-size: 16px;
+    }
+    &-worktime {
+      font-size: 16px;
+    }
+    &-link {
+      font-size: 16px;
+    }
+    &-link-line {
+      font-size: 16px;
+      &::before {
+        margin-top: 32px;
+        margin-bottom: 32px;
+      }
+    }
+    &-btn-list {
+      display: flex;
+      justify-content: space-between;
+      width: 393px;
+      margin: 0 auto;
+    }
+  }
+}

@@ -1,0 +1,203 @@
+.about-backdrop {
+    position: fixed;
+    transform: translateX(0);
+    opacity: 1;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 200;
+    background-color: rgba(225, 121, 145, 0.849);
+    padding: 40px 10px;
+    overflow-y: scroll;
+
+    @include transition-2-selectors (transform, opacity);
+
+    @include screen('tablet') {
+        padding: 40px 30px;
+    }
+}
+
+.about-backdrop.is-hidden-about {
+    transform: translateX(100vw);
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+}
+
+.about-modal {
+
+    &-close {
+        position: absolute;
+        right: 28px;
+        top: 15px;
+        background-color: transparent;
+        border: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+
+        @include transition-1-selector(background-color);
+        
+        &:hover, &:focus{
+        background-color: var(--accent-color);
+        cursor: pointer;
+        }
+    }
+
+    &-img {
+        width: 100%;
+        border-radius: 20px;
+    }
+}
+
+.about-pros {
+    background-color: var(--section-background);
+    border-radius: 20px;
+    padding: 20px;
+
+    @media screen and (min-width: 480px) and (max-width: 767px) {
+        width: 460px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+        
+    @media screen and (min-width: 1500px) {
+        width: 1430px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+
+    &-item {
+
+        &:not(:last-child){
+            @media screen and (max-width: 767px) {
+                margin-bottom: 25px;
+            }
+        }
+    
+        @media screen and (max-width: 767px) { 
+            background-image: url('../images/mobile/milk-spalsh-mobile.png');
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: bottom 4% center;
+                
+            @media screen and (min-device-pixel-ratio: 2),
+                screen and (min-resolution: 192dpi),
+                screen and (min-resolution: 2dppx){
+                background-image: url('../images/mobile/milk-splash-mobile@2x.png');
+            }   
+        }  
+        
+        @include screen('tablet') {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            border-radius: 20px;
+
+            &:not(:last-child) {
+                margin-bottom: 30px;
+            }
+
+            &:nth-child(odd) {
+                flex-direction: row-reverse;
+                border-top: 1px solid rgba(225, 121, 145, 0.849);
+                border-bottom: 1px solid rgba(225, 121, 145, 0.849);
+                background-color: rgba(225, 121, 145, 0.2);
+            }
+        }
+
+        @include screen('desktop') {
+            width: 75%;
+            
+            &:nth-child(even) {
+                position: relative;
+                margin-left: auto;
+                margin-right: auto;
+                z-index: 1;
+            }
+
+            &:nth-child(even)::after {
+                content: '';
+                position: absolute;
+                z-index: -1;
+                left: 0%;
+                bottom: -30%;
+                height: 100%;
+                width: 100%;
+                background-image: url('../images/desktop/milk-splash-desktop.png');
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: bottom 45% right;
+
+                        
+                @media screen and (min-device-pixel-ratio: 2),
+                    screen and (min-resolution: 192dpi),
+                    screen and (min-resolution: 2dppx){
+                    background-image: url('../images/desktop/milk-splash-desktop@2x.png');
+                }   
+            }
+        }
+    }   
+}
+
+
+.about-picture-wrap {
+    width: 100%;
+
+    @media  screen and (max-width: 767px) {
+        margin-bottom: 20px;
+    }
+
+    @include screen('tablet') {
+        max-width: 340px;
+        flex-shrink: 0;
+        
+    }
+}
+
+.about-text-wrap {
+    @include screen('tablet') {
+        margin-right: 20px;
+        margin-left: 20px; 
+    }
+
+    @include screen('desktop') {
+        width: 700px;
+    }
+}
+
+.about-paragraph-1 {
+    @include font(12px, 19px);
+    font-weight: 500;
+    color: var(--dark-color);
+    margin-bottom: 33px;
+
+    @include screen('tablet') {
+        @include font(14px, 25px);
+    }
+
+    @include screen('desktop') {
+        @include font(16px, 28px);
+        letter-spacing: 0.04em;
+        margin-bottom: 35px;
+    }
+}
+
+.about-paragraph-2 {
+    @include font(12px, 19px);
+    font-weight: 500;
+    color: var(--about-paragraph-color);
+
+    @include screen('tablet') {
+        @include font(14px, 25px);
+        letter-spacing: 0.04em;
+    }
+
+    @include screen('desktop') {
+        @include font(14px, 27px);
+    }
+}

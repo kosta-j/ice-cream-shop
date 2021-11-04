@@ -1,0 +1,44 @@
+<div data-modal class="backdrop is-hidden">
+    <div class="modal">
+        <form action="#" class="form" autocomplete="off">
+            <p class="form-title">order your favorite ice cream</p>
+            <ul class="form-list list">
+             <li class="item">
+              <img class="form-img" src="./images/mobile/product-1-mobile.png" alt="ice-cream">
+              <p class="description">icecream</p>
+            <label> (kg) <input type="number" name="quantity" min="0" max="50" step="1" value="0"></label>
+             </li>
+             <li class="item">
+              <img class="form-img" src="./images/mobile/product-2-mobile.png" alt="ice-coffee">
+              <p class="description">ice-coffee</p>
+            <label> (kg) <input type="number" name="quantity" min="0" max="50" step="1" value="0"></label>
+             </li>
+             <li class="item">
+              <img class="form-img" src="./images/mobile/product-3-mobile.png" alt="milkshake">
+              <p class="description">milkshake</p>
+            <label> (kg) <input type="number" name="quantity" min="0" max="50" step="1" value="0"></label>
+             </li>
+            </ul>
+            <ul class="list form-field">
+                <li class="item">
+                    <label class="form-label" for="name">name</label>
+                    <input class="form-input" id="name" name="user-name" placeholder=" " type="text">
+                </li>
+                <li class="item">
+                    <label class="form-label" for="phone">phone number</label>
+                    <input class="form-input" id="phone" name="user-phone" placeholder=" " type="tel">
+                </li>
+                <li class="item coment">
+                    <label class="form-label" for="coment">comment</label>
+                    <textarea class="form-coment" id="coment" name="user-coment" placeholder="Enter text"></textarea>
+                </li>
+            </ul>
+            <button class="modal-btn button" type="submit">Leave order</button>
+        </form>
+        <button data-modal-close type="button" class="mobile-menu-close">
+            <svg class="mobile-menu-close-icon" width="14" height="14">
+                <use href="./images/sprite.svg#close-icon"></use>
+            </svg>
+        </button>
+    </div>
+</div>

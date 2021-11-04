@@ -1,0 +1,57 @@
+.container {
+  // общие стили контейнера:
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0 auto;
+
+  @include screen('mobile') {
+    width: 480px;
+  }
+  @include screen('tablet') {
+    width: 768px;
+    padding-left: 36px;
+    padding-right: 36px;
+  }
+  @include screen('desktop') {
+    width: 1280px;
+    padding-left: 114px;
+    padding-right: 114px;
+
+    .header & {
+      padding-left: 46px;
+      padding-right: 46px;
+    }
+  }
+
+  .header & {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media screen and (max-width: 767px) {
+      padding-top: 6px;
+    }
+    @include screen('tablet') {
+      padding-top: 37px;
+    }
+  }
+
+  .hero & {
+    position: relative;
+    z-index: -1;
+    
+  }
+
+  .footer & {
+    padding-bottom: 25px;
+
+    @include screen('tablet') {
+      padding-bottom: 18px;
+    }
+
+    @include screen('desktop') {
+      padding-bottom: 10px;
+    }
+  }
+}

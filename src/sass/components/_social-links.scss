@@ -1,0 +1,37 @@
+.social-list {
+  display: flex;
+  justify-content: space-between;
+  width: 152px;
+  margin-left: auto;
+  margin-bottom: 46px;
+
+  @include screen('tablet') {
+    width: 162px;
+  }
+  @include screen('desktop') {
+    width: 151px;
+  }
+}
+
+.social-list .link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  color: var(--section-alt-background);
+  fill: var(--footer-accent);
+
+  @include screen('tablet') {
+    width: 34px;
+    height: 34px;
+  }
+
+  @include transition-1-selector(fill);
+
+  &:hover,
+  &:focus {
+    fill: var(--accent-color);
+  }
+}

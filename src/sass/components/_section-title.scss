@@ -1,0 +1,79 @@
+.section-title,
+.section-subtitle {
+  text-align: center;
+  font-family: var(--logo-title-font);
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.section-title {
+  @include font(34px, 39px);
+  color: var(--accent-color);
+  letter-spacing: 0.04em;
+
+  @include screen('tablet') {
+    @include font(48px, 55px);
+  }
+
+  @include screen('desktop') {
+    @include font(58px, 66px);
+    letter-spacing: 0.06em;
+  }
+
+  .products & {
+    margin-bottom: 31px;
+
+    @include screen('tablet') {
+      margin-bottom: 40px;
+    }
+
+    @include screen('desktop') {
+      margin-bottom: 50px;
+    }
+  }
+
+  .about & {
+    margin-bottom: 26px;
+
+    @include screen('tablet') {
+      margin-bottom: 50px;
+    }
+
+    @include screen('desktop') {
+      margin-bottom: 55px;
+    }
+  }
+
+  .footer & {
+    text-align: left;
+
+    @include screen('tablet') {
+      letter-spacing: 0.06em;
+    }
+  }
+}
+
+.section-subtitle {
+  @include font(18px, 21px);
+  color: var(--label-title-color);
+  margin-bottom: 15px;
+
+  @include screen('tablet') {
+    @include font(26px, 30px);
+  }
+
+  @include screen('desktop') {
+    @include font(30px, 34px);
+  }
+
+  .footer & {
+    margin-bottom: 17px;
+    text-align: left;
+
+    @include screen('tablet') {
+      margin-bottom: 16px;
+
+      letter-spacing: 0.04em;
+    }
+  }
+}

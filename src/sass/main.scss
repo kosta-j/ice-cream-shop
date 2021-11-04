@@ -1,0 +1,31 @@
+// UTILS
+@import './utils/mixins';
+@import './utils/variables';
+@import './utils/visually-hidden';
+
+// BASE
+@import './base/common';
+@import './base/container';
+
+// COMPONENTS
+@import './components/mobile-menu';
+@import './components/modal-map';
+@import './components/button';
+@import './components/section-title';
+@import './components/social-links';
+@import './components/section-title';
+
+// LAYOUT
+@import './layout/header';
+@import './layout/hero';
+@import './layout/products';
+@import './layout/about';
+@import './layout/advantages';
+@import './layout/gallery';
+@import './layout/customer-reviews';
+@import './layout/contacts';
+@import './layout/footer';
+@import './layout/about-modal';
+@import './layout/modal-buy-now';
+@import './layout/modal-franchise'
+

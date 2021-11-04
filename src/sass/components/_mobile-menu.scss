@@ -1,0 +1,75 @@
+.mobile-menu {
+  @include screen('tablet') {
+    width: 33vw;
+  }
+
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 78vw;
+  height: 100vh;
+  // padding: 60px 20px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  transform: translateX(100%);
+  background-color: var(--bgr-color-mobile-menu);
+  transition: transform 250ms linear;
+
+  &.is-open {
+    transform: translateX(0);
+  }
+}
+
+.mobile-menu-close-icon {
+  display: block;
+  fill: var(--section-alt-background);
+}
+
+.mobile-menu-close {
+  position: absolute;
+  top: 23px;
+  right: 28px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.mobile-nav {
+  margin-top: 32px;
+}
+
+.mobile-nav-link {
+  display: block;
+  padding: 14px 24px;
+  border: 1px solid #E18298;
+  color: #ffffff;
+
+  &-item {
+  border: 1px solid var(--border-color-mobile-nav-link);
+}
+
+
+  &-link {
+  padding-top: 9px;
+  padding-bottom: 9px;
+  padding-right: 20px;
+  padding-left: 20px;
+  display: block;
+  font-weight: 700;
+  color: var(--section-alt-background);
+  
+
+  &.current {
+    color: var(--accent-color);
+  }
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+}
+
+

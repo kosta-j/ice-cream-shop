@@ -1,0 +1,101 @@
+.header {
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .logo {
+    display: block;
+    width: 199px;
+    height: 50px;
+
+    background-image: url(../images/mobile/logo-mobile.png);
+    background-color: transparent;
+
+    animation-duration: 1000ms;
+    animation-iteration-count: 2;
+  }
+
+
+  .burger-btn {
+    @include screen('desktop') {
+      display: none;
+    }
+    @include screen('tablet') {
+      margin-left: auto;
+      margin-right: 30px;
+    }
+
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    height: 12px;
+  }
+  .burger-icon {
+    width: 20px;
+    height: 12px;
+  }
+}
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .nav-list {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 88px;
+
+    & .item + .item {
+      margin-left: 35px;
+    }
+    & .link {
+      padding: 32px 0;
+      font-weight: 700;
+      @include font(14px, 16px);
+      letter-spacing: 0.02em;
+
+      color: var(--section-alt-background);
+      &.current {
+        color: var(--accent-color);
+      }
+
+      &:hover,
+      &:focus {
+        color: var(--accent-color);
+      }
+    }
+    @media screen and (max-width: 1279px) {
+      display: none;
+    }
+  }
+}
+
+// .buy-btn {
+//   justify-content: space-between;
+//   align-items: center;
+//   padding: 0 37px;
+//   width: 160px;
+//   height: 44px;
+
+//   display: none;
+
+//   &:hover,
+//   &:focus {
+//     background-color: var(--light-btn-hover-bg-color);
+//   }
+
+//   @include screen('tablet') {
+//     display: flex;
+//   }
+//   @include screen('desktop') {
+//     margin-right: 115px;
+//   }
+// }

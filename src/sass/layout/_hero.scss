@@ -1,0 +1,234 @@
+.hero {
+  position: relative;
+  z-index: 0;
+  background-color: var(--hero-background);
+
+
+  & .container {
+    position: relative;
+    z-index: 0;
+    min-height: 502px;
+    padding-top: 193px;
+    padding-bottom: 160px;
+
+
+//tablet
+    @media screen and (max-width: 1279px) {
+    background-image: url('../images/tablet/hero-icecream-tablet.png'),
+      url('../images/tablet/hero-girl-tablet.png'),
+      url('../images/tablet/hero-milk-tablet.png'),
+      url('../images/mobile/ellipse.png');
+    background-size: 143px, 168px, 124px, 324px;
+    background-repeat: no-repeat;
+    background-position: bottom right 247px, bottom right 34px,
+      bottom 28px left 34px, top 31px right 137px;
+
+      @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url('../images/tablet/hero-icecream-tablet@2x.png'),
+        url('../images/tablet/hero-girl-tablet@2x.png'),
+        url('../images/tablet/hero-milk-tablet@2x.png'),
+        url('../images/mobile/ellipse.png');
+    }
+  }
+//mobile
+    @media screen and (max-width: 767px) {
+    background-image: url('../images/mobile/hero-icecream-mobile.png'),
+      url('../images/mobile/ellipse.png');
+    background-size: 171px, 346px;
+    background-repeat: no-repeat;
+    background-position: bottom right 32px, bottom 75px right -62px;
+
+      @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url('../images/mobile/hero-icecream-mobile@2x.png'),
+        url('../images/mobile/ellipse.png');
+    }
+  }
+
+  @include screen('tablet') {
+    min-height: 400px;
+    padding-top: 102px;
+    padding-bottom: 34px;
+  }
+
+  @include screen('desktop') {
+    min-height: 665px;
+    padding-top: 171px;
+    padding-bottom: 56px;
+
+    background-image: url('../images/desktop/hero-icecream-desktop.png'),
+      url('../images/desktop/hero-girl-desktop.png'),
+      url('../images/desktop/hero-milk-desktop.png'),
+      url('../images/mobile/ellipse.png');
+    background-size: 236px, 293px, 188px, 538px;
+    background-repeat: no-repeat;
+    background-position: bottom right 450px, bottom right 109px,
+      bottom 45px left 77px, top 52px right 267px;
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url('../images/desktop/hero-icecream-desktop@2x.png'),
+        url('../images/desktop/hero-girl-desktop@2x.png'),
+        url('../images/desktop/hero-milk-desktop@2x.png'),
+        url('../images/mobile/ellipse.png');
+    }
+  }
+  }
+
+  &-title {
+    max-width: 218px;
+    display: block;
+    // margin-top: 193px;
+    margin-bottom: 19px;
+    font-family: var(--logo-title-font);
+    font-weight: 400;
+    @include font(26px, 30px);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+
+    color: #ffffff;
+
+    .element {
+      @include font(48px, 46px);
+
+      color: #d41443;
+    }
+  }
+
+  & .button-list {
+    display: flex;
+    & .item + .item {
+      margin-left: 8px;
+
+      @include screen('desktop') {
+        margin-left: 15px;
+      }
+    }
+  }
+
+  & .number-list,
+  & .description {
+    display: none;
+  }
+
+
+
+  @include screen('tablet') {
+    
+
+    &-title {
+      max-width: 162px;
+
+      @include font(22px, 25px);
+
+      .element {
+        @include font(34px, 31px);
+      }
+    }
+
+    & .number-list {
+      position: absolute;
+      top: 94px;
+      right: 34px;
+      display: block;
+      @include font(8px, 10px);
+      text-align: right;
+
+      color: var(--section-alt-background);
+
+      & .item + .item {
+        margin-top: 14px;
+      }
+    }
+
+    & .number {
+      position: relative;
+      z-index: 0;
+      font-family: var(--logo-title-font);
+      font-style: normal;
+      font-weight: normal;
+      @include font(28px, 32px);
+      letter-spacing: 0.04em;
+      color: var(--accent-color);
+
+      &::after {
+        position: absolute;
+        z-index: -1;
+        top: -2px;
+        right: -6px;
+        content: '';
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+
+        background: var(--section-alt-background);
+      }
+    }
+
+    & .description {
+      position: absolute;
+      left: 154px;
+      bottom: 59px;
+      display: block;
+      max-width: 114px;
+      @include font(8px, 12px);
+      color: var(--section-alt-background);
+    }
+  }
+
+  @include screen('desktop') {
+
+    &-title {
+      max-width: 277px;
+    
+      @include font(38px, 44px);
+
+      .element {
+        @include font(58px, 52px);
+      }
+    }
+
+    & .number-list {
+      top: 156px;
+      right: 97px;
+      @include font(14px, 18px);
+
+      & .item + .item {
+        margin-top: 35px;
+      }
+    }
+
+    & .number {
+      @include font(56px, 53px);
+
+      &::after {
+        top: -4px;
+        right: -12px;
+        width: 30px;
+        height: 30px;
+      }
+    }
+
+    & .description {
+      left: 295px;
+      bottom: 102px;
+      max-width: 200px;
+      @include font(14px, 20px);
+    }
+    .more-button {
+      left: 295px;
+      bottom: 56px;
+      width: 26px;
+      height: 26px;
+
+      &-icon {
+        width: 9px;
+        height: 9px;
+      }
+    }
+  }
+}

@@ -1,0 +1,55 @@
+/* RESETS */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+.list {
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+}
+
+/* RESETS end */
+/* ============================== */
+
+body {
+  position: relative;
+  margin: auto;
+  color: var(--dark-color);
+  background-color: var(--section-alt-background);
+
+  font-weight: 400;
+  font-family: var(--main-font);
+
+  font-size: 14px;
+  line-height: 1.76;
+
+  &.modal-open {
+    overflow: hidden;
+  }
+}
+
+.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
